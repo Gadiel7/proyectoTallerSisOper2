@@ -1,0 +1,5 @@
+- hosts: innovasys
+  become: true
+  roles:
+    - apache
+    - samba

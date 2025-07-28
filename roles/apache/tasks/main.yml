@@ -1,0 +1,19 @@
+---
+# tasks file for roles/apache
+- name: Instalar Apache
+  apt:
+    name: apache2
+    state: present
+    update_cache: true
+
+- name: Copiar plantila inde.html
+  template:
+    src: index.html.j2
+    dest: /var/www/html/index.html
+  notify: Reiniciar Apache
+
+- name: Habilitar e inciar apache
+  systemd:
+    name: apache2
+    enabled: true
+    state: started

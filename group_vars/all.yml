@@ -1,0 +1,4 @@
+nombre_empresa: "InnovaSys"
+usuario_samba: devuser1
+grupo_samba: desarrolladores
+password_samba: "Innova.2025"

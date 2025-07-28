@@ -1,0 +1,27 @@
+---
+# tasks file for roles/samba
+- name: Instalar Samba
+  apt:
+    name: samba
+    state: present
+    update_cache: true
+
+- name: Crear grupo
+  group:
+    name: "{{ grupo_samba }}"
+    state: present
+
+- name: Crear usuario
+  user:
+    name: "{{ usuario_samba }}"
+    group: "{{ grupo_samba }}"
+    shell: /usr/sbin/nologin
+    create_home: no
+    state: present
+
+- name: Crear directorio compartido
+  file:
+    path: /srv/samba/proyectos
+    state: directory
+    mode: '0770'
+    group: "{{ grupo_samba }}"
