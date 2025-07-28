@@ -8,24 +8,38 @@ Se configuran dos servicios principales en un servidor Ubuntu 24.04:
 📁 Servidor de Archivos con Samba
 
 📁 Estructura del Proyecto
+
 proyecto-innovasys/
 
 ├── inventario.ini
 
 ├── site.yml
+
 ├── roles/
+
 │   ├── apache/
-│   │   ├── tasks/
-│   │   │   └── main.yml
-│   │   ├── handlers/
-│   │   │   └── main.yml
-│   │   └── templates/
-│   │       └── index.html.j2
-│   └── samba/
-│       ├── tasks/
-│       │   └── main.yml
-│       ├── handlers/
-│       │   └── main.yml
+│   
+│   ├── tasks/
+│   
+│   │   └── main.yml
+│   
+├── handlers/
+│   
+│   │   └── main.yml
+│   
+│   └── templates/
+│  
+│       └── index.html.j2
+│   
+└── samba/
+│       
+├── tasks/
+│      
+│   └── main.yml
+│       
+├── handlers/
+│      
+│└── main.yml
 ├── group_vars/
 │   └── all.yml
 └── README.md
