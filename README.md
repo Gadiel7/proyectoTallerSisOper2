@@ -9,7 +9,9 @@ Se configuran dos servicios principales en un servidor Ubuntu 24.04:
 
 📁 Estructura del Proyecto
 proyecto-innovasys/
+
 ├── inventario.ini
+
 ├── site.yml
 ├── roles/
 │   ├── apache/
